@@ -1,1 +1,1 @@
-var loal
+var loal =true 
