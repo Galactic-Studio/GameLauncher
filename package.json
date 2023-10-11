@@ -2,9 +2,9 @@
   "name": "gvlauncher",
   "version": "0.0.2",
   "description": "The Galactic Vanguard Game Launcher",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Galactic-Vanguard/GameLauncher/issues"
   },
-  "homepage": "https://github.com/Galactic-Vanguard/GameLauncher#readme"
+  "homepage": "https://github.com/Galactic-Vanguard/GameLauncher#readme",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "tailwindcss": "^3.3.3"
+  }
 }
