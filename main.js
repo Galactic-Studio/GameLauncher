@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron')
 const path = require('node:path')
 const core = require("./src/scripts/core.js")
 
-const createWindow = () => {
+const loading = () => {
   const win = new BrowserWindow({
     width: 300,
     height: 400,
@@ -17,13 +17,15 @@ const createWindow = () => {
       devTools: true,
     }
   })
-
   win.loadFile('./app/pages/loading.html')
+  if (!core.updater.isUpdated()){
+    
+  }
 }
 
 app.whenReady().then(async () => {
-  console.log(await core.updater.isUpdated())
-  createWindow()
+  loadingWindow()
+
 })
 
 app.on('window-all-closed', () => {

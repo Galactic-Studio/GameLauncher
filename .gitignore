@@ -1,5 +1,6 @@
 /deployment
 .env
+/src
 # Logs
 logs
 *.log
