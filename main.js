@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('node:path')
+const core = require("./src/scripts/core.js")
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -20,7 +21,8 @@ const createWindow = () => {
   win.loadFile('./app/pages/loading.html')
 }
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+  console.log(await core.updater.isUpdated())
   createWindow()
 })
 

@@ -1,0 +1,1 @@
+exports.updater = require("./update")
