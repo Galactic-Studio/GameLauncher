@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('node:path')
-const core = require("./src/scripts/core.js")
+const core = require("./src/core.js")
 
 const loading = () => {
   const win = new BrowserWindow({
@@ -19,7 +19,7 @@ const loading = () => {
   })
   win.loadFile('./app/pages/loading.html')
   if (!core.updater.isUpdated()){
-    
+
   }
 }
 
