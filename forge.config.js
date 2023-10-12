@@ -9,6 +9,8 @@ module.exports = {
       config: {
         authors: "Galactic Vanguard Team",
         name: "GalacticVanguardLauncher",
+        iconUrl: "./images/Icon.ico",
+        loadingGif: null
       },
     },
     {

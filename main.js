@@ -2,25 +2,28 @@ const { app, BrowserWindow } = require('electron')
 const path = require('node:path')
 const core = require("./src/core.js")
 
-const loading = () => {
-  const win = new BrowserWindow({
+let win
+
+const loadingWindow = async () => {
+  win = new BrowserWindow({
     width: 300,
     height: 400,
-    autoHideMenuBar: false,
+    autoHideMenuBar: true,
+    icon: "./images/Icon.ico",
     frame: true,
-    resizable: true,
+    resizable: false,
     maximizable: false,
     minimizable: false,
     title: "Loading",
     webPreferences: {
       preload: path.join(__dirname, './source/scripts/functionLoader.js'),
       devTools: true,
+      nodeIntegration: true,
     }
   })
   win.loadFile('./app/pages/loading.html')
-  if (!core.updater.isUpdated()){
-
-  }
+  console.log(await core.updater.isUpdated())
+  core.updater.updateGame(win)
 }
 
 app.whenReady().then(async () => {

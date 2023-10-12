@@ -1,6 +1,7 @@
 /deployment
 .env
 /src
+/gameBuild
 # Logs
 logs
 *.log

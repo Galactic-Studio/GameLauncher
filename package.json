@@ -31,7 +31,9 @@
     "@octokit/core": "^5.0.1",
     "dotenv": "^16.3.1",
     "electron-squirrel-startup": "^1.0.0",
+    "extract-zip": "^2.0.1",
     "needle": "^3.2.0",
+    "node-downloader-helper": "^2.1.9",
     "semver": "^7.5.4"
   }
 }
